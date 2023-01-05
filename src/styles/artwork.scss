@@ -1,0 +1,23 @@
+.artWorkMain {
+  background-color: #f4f4f4;
+
+  .artContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    .imgDiv {
+      padding: 15px;
+      .artWorkImage {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        width: 250px;
+        height: 320px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
+}

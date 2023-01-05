@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./components/pages/Home";
+import { Layouts } from "./components/Layouts";
+import { About } from "./components/pages/About";
+import { Login } from "./components/pages/Login";
+import { Artwork } from "./components/pages/Artwork";
+import { ShoppingBag } from "./components/pages/ShoppingBag";
+import { Art } from "./components/pages/Art";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layouts />}>
+          <Route index element={<Home />}></Route>
+          <Route path="/artwork" element={<Artwork />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/art" element={<Art />}></Route>
+          <Route path="/shoppingCart" element={<ShoppingBag />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
