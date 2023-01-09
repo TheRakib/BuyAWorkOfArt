@@ -12,7 +12,8 @@ export const Layouts = () => {
     <div className="layoutsWrapper">
       <header>
         <Link to="/" className="home">
-          <h2>hangIt</h2>
+          <h1>BAWOA</h1>
+          <p>Buy A Work Of Art</p>
         </Link>
         <div className="nav-div">
           <nav>
