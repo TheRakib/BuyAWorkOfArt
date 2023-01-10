@@ -9,15 +9,9 @@ export const Artwork = () => {
     client
       .fetch(
         `*[_type == "product"]{
-    title,
     slug,
-    image{
-      asset->{
-        _id,
-        url
-      },
-          alt
-       }
+    image,
+    name
   }`
       )
       .then((data: any) => setProduct(data))
@@ -39,7 +33,7 @@ export const Artwork = () => {
               >
                 <div className="imgDiv">
                   <img
-                    src={product.image}
+                    src={urlFor(product.image[0].asset).url()}
                     alt={product.image}
                     className="artWorkImage"
                   />

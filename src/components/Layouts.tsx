@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Footer } from "./pages/Footer";
 import shoppingBag from "../images/shoppingBag.png";
+import bawoaLogo from "../images/bawoaLogo.png";
 import "../styles/main.scss";
 
 export const Layouts = () => {
@@ -12,8 +13,7 @@ export const Layouts = () => {
     <div className="layoutsWrapper">
       <header>
         <Link to="/" className="home">
-          <h1>BAWOA</h1>
-          <p>Buy A Work Of Art</p>
+          <img className="logo" src={bawoaLogo} alt="logo" />
         </Link>
         <div className="nav-div">
           <nav>
