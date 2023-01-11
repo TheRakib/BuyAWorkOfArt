@@ -1,16 +1,10 @@
 import { client, urlFor } from "../../Client";
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import imageUrlBuilder from "@sanity/image-url";
 
-//const builder = imageUrlBuilder(client);
-
-//function urlFor(source: any) {
-//return builder.image(source);
-//}
-
 export const Art = () => {
-  const [singleProduct, setSingleProduct] = useState<any[]>([]);
+  const [singleProduct, setSingleProduct] = useState<any>(null);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -24,7 +18,7 @@ export const Art = () => {
     details
   }`
       )
-      .then((data: any) => setSingleProduct(data[0]))
+      .then((data: any) => setSingleProduct(data))
       .catch(console.error);
   }, [slug]);
 
@@ -38,8 +32,8 @@ export const Art = () => {
         <h2>Single art</h2>
         <div className="imageDiv">
           <img
-            src={urlFor(singleProduct[0].image.asset).url()}
-            alt={singleProduct[0].name}
+            src={urlFor(singleProduct.image.asset).url()}
+            alt={singleProduct.name}
           />
           <p> </p>
         </div>
