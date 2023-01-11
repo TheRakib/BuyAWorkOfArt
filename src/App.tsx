@@ -20,6 +20,8 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/art" element={<Art />}></Route>
+          /* använd <Route path="/art/:slug" component={Art} /> */
+
           <Route path="/shoppingCart" element={<ShoppingBag />}></Route>
           <Route path="*" element={<NoMatch />} />
         </Route>
