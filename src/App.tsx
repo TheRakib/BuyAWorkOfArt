@@ -8,6 +8,7 @@ import { Login } from "./components/pages/Login";
 import { Artwork } from "./components/pages/Artwork";
 import { ShoppingBag } from "./components/pages/ShoppingBag";
 import { Art } from "./components/pages/Art";
+import { NoMatch } from "./components/pages/NoMatch";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/art" element={<Art />}></Route>
           <Route path="/shoppingCart" element={<ShoppingBag />}></Route>
+          <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
     </BrowserRouter>

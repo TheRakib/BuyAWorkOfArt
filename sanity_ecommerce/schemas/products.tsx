@@ -37,5 +37,10 @@ export default {
       title: 'Details',
       type: 'string',
     }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'datetime',
+    }),
   ],
 }

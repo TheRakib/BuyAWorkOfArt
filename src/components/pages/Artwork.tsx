@@ -1,6 +1,6 @@
 import { client, urlFor } from "../../Client";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export const Artwork = () => {
   const [product, setProduct] = useState<any[]>([]);

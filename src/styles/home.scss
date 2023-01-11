@@ -58,8 +58,16 @@
   .artSection {
     display: flex;
     justify-content: center;
-
     gap: 10px;
     border-bottom: solid 2px;
+    .artWorkImage {
+      border-style: solid;
+      border-color: black;
+      border-width: 5px;
+      width: 250px;
+      height: 320px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
   }
 }
